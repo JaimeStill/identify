@@ -1,21 +1,66 @@
 ﻿using Identify.Models.Entities;
 using Identify.Models.Url;
 
-Bot user1 = new()
+Console.WriteLine("Testing Bots...");
+Console.WriteLine("Testing Simple Bot");
+
+Bot simpleBot = new()
 {
     Name = "Jaime",
-    Colorful = true,
-    PrimaryColorLevel = ColorLevel.Level400
 };
 
-Bot user2 = new()
+TestIdentity(simpleBot);
+
+Console.WriteLine("\nTesting Complex Bot");
+
+Bot complexBot = new()
 {
     Name = "Ellie",
-    ImageBackground = "#ffaacc"
+    ImageBackground = "#44ff99",
+    ImageRadius = 4,
+    Colors = "pink",
+    Colorful = true,
+    PrimaryColorLevel = 500,
+    SecondaryColorLevel = 400,
+    TextureChance=100,
+    MouthChance=100,
+    SidesChance=100,
+    TopChance=100
 };
 
-user1.Complete();
-user2.Complete();
+TestIdentity(complexBot);
 
-Console.WriteLine($"{user1.Name}: {user1.Image}");
-Console.WriteLine($"{user2.Name}: {user2.Image}");
+Console.WriteLine("\nTesting Adventurers...");
+Console.WriteLine("Testing Simple Adventurer");
+
+Adventurer simpleAd = new()
+{
+    Name = "Jaime"
+};
+
+TestIdentity(simpleAd);
+
+Console.WriteLine("\nTesting Complex Adventurer");
+
+Adventurer complexAd = new()
+{
+    Name = "Ellie",
+    ImageBackground = "#ffaa44",
+    ImageRadius = 4,
+    Eyes = "variant23",
+    Eyebrows = "variant10",
+    Mouth = "variant21",
+    Accessories = "glasses",
+    AccessoriesProbability = 100,
+    Hair = "long07",
+    SkinColor = "variant02",
+    HairColor = "#232323"
+};
+
+TestIdentity(complexAd);
+
+static void TestIdentity(Identity id)
+{
+    id.Complete();
+    Console.WriteLine($"{id.Name}: {id.Image}");
+}

@@ -2,7 +2,7 @@ using Identify.Models.Entities;
 using Microsoft.EntityFrameworkCore;
 
 namespace Identify.DbCli.Seed;
-public abstract class Seeder<E, C> where E : Entity where C : DbContext
+public abstract class Seeder<E, C> where E : SimpleEntity where C : DbContext
 {
     protected readonly C db;
 

@@ -1,0 +1,69 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "server-build",
+            "command": "dotnet",
+            "type": "shell",
+            "problemMatcher": "$msCompile",
+            "args": [
+                "build"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}/server/"
+            }
+        },
+        {
+            "label": "server-start",
+            "command": "dotnet",
+            "type": "process",
+            "problemMatcher": "$msCompile",
+            "args": [
+                "watch",
+                "run"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}/server/Identify.Api/"
+            },
+            "presentation": {
+                "panel": "dedicated"
+            }
+        },
+        {
+            "label": "db-drop",
+            "command": "dotnet",
+            "type": "shell",
+            "options": {
+                "cwd": "${workspaceFolder}/server/Identify.Data"
+            },
+            "args": [
+                "ef",
+                "database",
+                "drop",
+                "-f",
+                "-s",
+                "../Identify.Api"
+            ]
+        },
+        {
+            "label": "db-update",
+            "command": "dotnet ef database update -s ../Identify.Api",
+            "type": "shell",
+            "options": {
+                "cwd": "${workspaceFolder}/server/Identify.Data"
+            }
+        },
+        {
+            "label": "db-seed",
+            "command": "dotnet",
+            "type": "shell",
+            "problemMatcher": "$msCompile",
+            "args": [
+                "run"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}/server/Identify.DbCli"
+            }
+        }
+    ]
+}

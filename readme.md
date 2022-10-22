@@ -6,6 +6,7 @@ Sample app allowing architectural patterns and development strategies to be test
 
 [Attribution](#attribution)
 
+[VS Code Tasks](./.vscode/tasks.json)
 
 * [Test URL Builder](./tests/TestUrlBuilder/Program.cs):
 

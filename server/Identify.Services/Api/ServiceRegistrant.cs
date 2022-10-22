@@ -12,6 +12,7 @@ public static class ServiceRegistrant
         services.AddTransient<AdventurerMouthService>();
         services.AddTransient<AdventurerService>();
         services.AddTransient<BotColorService>();
-        services.AddTransient<BotService>();        
+        services.AddTransient<BotService>();
+        services.AddTransient<MakeService>();
     }    
 }

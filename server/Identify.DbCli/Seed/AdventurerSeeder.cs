@@ -12,13 +12,13 @@ public class AdventurerSeeder : Seeder<Adventurer, AppDbContext>
         {
             new()
             {
-                Name = "Jaime Still",
+                Name = "Jaime",
                 FirstName = "Jaime",
                 LastName = "Still"
             },
             new()
             {
-                Name = "Ellie Still",
+                Name = "Ellie",
                 FirstName = "Ellie",
                 LastName = "Still",
                 ImageBackground = "#ffaa44",

@@ -19,9 +19,9 @@ Sample app allowing architectural patterns and development strategies to be test
 
 * [API - Adventurers](./server/Identify.Models/Entities/Adventurer/Adventurer.cs)
 
-    ![image](https://user-images.githubusercontent.com/14102723/197317329-83f384ec-deb1-4ad7-b8a6-0b541c4d88e1.png)
+    ![image](https://user-images.githubusercontent.com/14102723/197317681-a71b6554-a656-443c-b115-ff1fdd4aae3c.png)
 
-    ![image](https://user-images.githubusercontent.com/14102723/197317347-a3b0da1b-fd59-4651-b42d-e41a0961ded5.png)
+    ![image](https://user-images.githubusercontent.com/14102723/197317714-e1e9b96f-0f84-484c-8839-cc864b974070.png)
 
     ![image](https://user-images.githubusercontent.com/14102723/197317365-c87e9f55-4c4c-4faf-8597-a1009f921a23.png)
 

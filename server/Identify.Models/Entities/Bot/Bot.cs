@@ -22,34 +22,14 @@ public class Bot : Identity
 
     public Make Make { get; set; }
 
-    protected override UrlBuilder GenerateUrl()
-    {
-        UrlBuilder builder = base.GenerateUrl();
-
-        if (!string.IsNullOrWhiteSpace(Colors))
-            builder.AddQuery("colors", Colors);
-
-        if (Colorful is not null)
-            builder.AddQuery("colorful", Colorful.ToString().ToLower());
-
-        if (PrimaryColorLevel is not null)
-            builder.AddQuery("primaryColorLevel", ((int)PrimaryColorLevel).ToString());
-
-        if (SecondaryColorLevel is not null)
-            builder.AddQuery("secondaryColorLevel", ((int)SecondaryColorLevel).ToString());
-
-        if (TextureChance is not null)
-            builder.AddQuery("textureChance", TextureChance.ToString());
-
-        if (MouthChance is not null)
-            builder.AddQuery("mouthChance", MouthChance.ToString());
-
-        if (SidesChance is not null)
-            builder.AddQuery("sidesChance", SidesChance.ToString());
-
-        if (TopChance is not null)
-            builder.AddQuery("topChance", TopChance.ToString());
-
-        return builder;
-    }
+    protected override UrlBuilder GenerateUrl() =>
+        base.GenerateUrl()            
+            .AddQuery("colors", Colors)
+            .AddQuery("colorful", Colorful.ToString().ToLower())
+            .AddQuery("primaryColorLevel", PrimaryColorLevel?.ToString())
+            .AddQuery("secondaryColorLevel", SecondaryColorLevel?.ToString())
+            .AddQuery("textureChance", TextureChance?.ToString())
+            .AddQuery("mouthChance", MouthChance?.ToString())
+            .AddQuery("sidesChance", SidesChance?.ToString())
+            .AddQuery("topChance", TopChance?.ToString());
 }

@@ -13,7 +13,9 @@ public class UrlBuilder
 
     public UrlBuilder AddQuery(string key, string value)
     {
-        Query.Add(new(key, value));
+        if (!string.IsNullOrWhiteSpace(value))
+            Query.Add(new(key, value));
+
         return this;
     }
 

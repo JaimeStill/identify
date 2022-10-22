@@ -8,18 +8,10 @@ public abstract class Identity : Entity
     public string Image { get; protected set; }
     public string ImageBackground { get; set; }
 
-    protected virtual UrlBuilder GenerateUrl()
-    {
-        UrlBuilder builder = new($"{ImageRootUrl}{Url}.svg");
-
-        if (!string.IsNullOrWhiteSpace(ImageBackground))
-            builder.AddQuery("backgroundColor", ImageBackground);
-
-        if (ImageRadius is not null)
-            builder.AddQuery("radius", ImageRadius.ToString());
-
-        return builder;
-    }
+    protected virtual UrlBuilder GenerateUrl() =>
+        new UrlBuilder($"{ImageRootUrl}{Url}.svg")
+            .AddQuery("backgroundColor", ImageBackground)
+            .AddQuery("radius", ImageRadius?.ToString());
 
     public override void Complete()
     {

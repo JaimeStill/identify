@@ -64,6 +64,18 @@
             "options": {
                 "cwd": "${workspaceFolder}/server/Identify.DbCli"
             }
+        },
+        {
+            "label": "test-url-builder",
+            "command": "dotnet",
+            "type": "shell",
+            "problemMatcher": "$msCompile",
+            "args": [
+                "run"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}/tests/TestUrlBuilder"
+            }
         }
     ]
 }

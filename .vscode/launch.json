@@ -1,0 +1,31 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug API",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "server-build",
+            "program": "${workspaceFolder}/server/Identify.Api/bin/Debug/net6.0/Identify.Api.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/server/Identify.Api",
+            "stopAtEntry": false,
+            "env": {
+                "ASPNETCORE_ENVIRONMENT": "Development"
+            }
+        },
+        {
+            "name": "Debug DbCli",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "server-build",
+            "program": "${workspaceFolder}/server/Identify.DbCli/bin/Debug/net6.0/Identify.DbCli.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/server/Identify.DbCli",
+            "stopAtEntry": false,
+            "env": {
+                "ASPNETCORE_ENVIRONMENT": "Development"
+            }
+        }
+    ]
+}
